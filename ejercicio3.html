@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <script>
+        function tres() {
+
+        let apples = [2,3,-4];
+        let oranges = [3,-2,-4];
+        let answerApples = 0;
+        let answerOranges = 0;
+
+        let numberOfApples = 3; //m
+        let numberOfOranges = 3; //n
+
+        let appleTree = 4; //a
+        let houseInit = 7; //s
+        let houseEnd = 10; //t
+        let orangeTree = 12; //b
+        let houseRange = [];
+        
+        for(i = houseInit; i <= houseEnd; i++){
+            houseRange.push(i);
+            
+        }
+        
+        
+
+        let landingApples = [];
+        let landingOranges = [];
+        let applesInhouse = [];
+        let orangesInHouse = [];
+
+
+        for(i = 0; i <= apples.length -1; i++){
+            landingApples.push(apples[i] + appleTree);
+             
+        }
+
+        for(i = 0; i <= oranges.length -1; i++){
+            landingOranges.push(oranges[i] + orangeTree);
+            
+        }
+        
+        for(i = 0; i <= landingApples.length; i++){
+            if(houseRange.includes(landingApples[i])){
+                applesInhouse.push("yes");
+                answerApples = applesInhouse.length;
+                
+            }
+        }
+        console.log('manzanas',answerApples)
+        for(i = 0; i <= landingOranges.length; i++){
+            if(houseRange.includes(landingOranges[i])){
+                orangesInHouse.push("yes");
+                answerOranges = orangesInHouse.length;
+                
+            }
+        }
+        console.log('naranjas',answerOranges)
+
+
+        
+        }
+
+        tres();
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input1 = "cat";
+        let input2 = "TAC"
+
+        function anagram(a, b) {
+            
+            let lowA = a.toLowerCase();
+            let lowB = b.toLowerCase();
+
+            let arrayA = lowA.split("");
+            let arrayAReverse = arrayA.reverse()
+            let inverseInput = arrayAReverse.join("")
+
+            if(inverseInput === lowB){
+                console.log("Anagrams")
+                return "Anagrams"
+            } else {
+                console.log("not anagrams")
+                return "Not Anagrams"
+            }
+        }
+
+        anagram(input1, input2)
+
+    </script>
+</body>
+</html>
